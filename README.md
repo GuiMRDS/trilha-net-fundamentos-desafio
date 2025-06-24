@@ -1,38 +1,67 @@
 # DIO - Trilha .NET - Fundamentos
 www.dio.me
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de fundamentos, da trilha .NET da DIO.
+# 🚗 Sistema de Estacionamento - C# (.NET)
 
-## Contexto
-Você foi contratado para construir um sistema para um estacionamento, que será usado para gerenciar os veículos estacionados e realizar suas operações, como por exemplo adicionar um veículo, remover um veículo (e exibir o valor cobrado durante o período) e listar os veículos.
+## 📄 Descrição
 
-## Proposta
-Você precisará construir uma classe chamada "Estacionamento", conforme o diagrama abaixo:
-![Diagrama de classe estacionamento](diagrama_classe_estacionamento.png)
+Este projeto foi desenvolvido como parte do **Desafio de Projeto da Trilha .NET - Fundamentos** da [Digital Innovation One (DIO)](https://www.dio.me/).
 
-A classe contém três variáveis, sendo:
+O desafio consiste na construção de um **Sistema de Estacionamento**, que será utilizado para **gerenciar os veículos estacionados e realizar operações essenciais**, como:
 
-**precoInicial**: Tipo decimal. É o preço cobrado para deixar seu veículo estacionado.
+- ✅ Cadastrar um veículo;
+- ✅ Remover um veículo (calculando o valor total pelo tempo de permanência);
+- ✅ Listar os veículos estacionados.
 
-**precoPorHora**: Tipo decimal. É o preço por hora que o veículo permanecer estacionado.
+O objetivo é aplicar na prática os conceitos de **Programação Orientada a Objetos (POO)** e os fundamentos da linguagem **C# com .NET**, além de consolidar o uso de versionamento de código com **Git e GitHub**.
 
-**veiculos**: É uma lista de string, representando uma coleção de veículos estacionados. Contém apenas a placa do veículo.
+---
 
-A classe contém três métodos, sendo:
+## 💡 Contexto do Desafio
 
-**AdicionarVeiculo**: Método responsável por receber uma placa digitada pelo usuário e guardar na variável **veiculos**.
+Você foi contratado para construir um sistema de estacionamento, onde será possível:
 
-**RemoverVeiculo**: Método responsável por verificar se um determinado veículo está estacionado, e caso positivo, irá pedir a quantidade de horas que ele permaneceu no estacionamento. Após isso, realiza o seguinte cálculo: **precoInicial** * **precoPorHora**, exibindo para o usuário.
+- Registrar veículos que entram no estacionamento;
+- Remover veículos quando saem, calculando o valor a ser pago com base no tempo;
+- Listar todos os veículos presentes no estacionamento.
 
-**ListarVeiculos**: Lista todos os veículos presentes atualmente no estacionamento. Caso não haja nenhum, exibir a mensagem "Não há veículos estacionados".
+---
 
-Por último, deverá ser feito um menu interativo com as seguintes ações implementadas:
-1. Cadastrar veículo
-2. Remover veículo
-3. Listar veículos
-4. Encerrar
+## 🔧 Proposta e Estrutura do Projeto
 
+A classe principal é a **`Estacionamento`**, que possui os seguintes atributos e métodos:
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+### 🔸 **Atributos:**
+- **`precoInicial`** (`decimal`): Valor fixo cobrado no momento da entrada.
+- **`precoPorHora`** (`decimal`): Valor cobrado por cada hora de permanência.
+- **`veiculos`** (`List<string>`): Lista contendo as placas dos veículos estacionados.
+
+### 🔸 **Métodos:**
+- **`AdicionarVeiculo()`**  
+  Recebe uma placa informada pelo usuário e adiciona à lista de veículos.
+
+- **`RemoverVeiculo()`**  
+  Verifica se o veículo está na lista. Se estiver, solicita a quantidade de horas, calcula o valor total (`precoInicial + precoPorHora * horas`) e remove o veículo da lista.
+
+- **`ListarVeiculos()`**  
+  Exibe todos os veículos atualmente estacionados. Caso não haja nenhum, informa que não há veículos estacionados.
+
+---
+
+## 🗺️ Funcionalidades do Menu Interativo
+
+- 🚗 **Cadastrar veículo**
+- 🗑️ **Remover veículo**
+- 📜 **Listar veículos**
+- ❌ **Encerrar programa**
+
+---
+
+## 💻 Tecnologias Utilizadas
+- Linguagem: **C#**
+- Framework: **.NET 6 ou superior**
+- Paradigma: **Programação Orientada a Objetos (POO)**
+- Controle de versão: **Git e GitHub**
+- IDE recomendada: **Visual Studio / Visual Studio Code**
+
+---
